@@ -41,7 +41,7 @@ public class Kafe11 {
                 totalHarga += 0.4 * totalHarga;
                 break;
             default:
-                System.out.println("invalid input");
+                System.out.println("size tidak tersedia");
                 break;
         }
         double diskon = keanggotaan ? 0 : 0.1;

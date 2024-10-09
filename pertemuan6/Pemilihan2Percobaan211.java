@@ -5,9 +5,9 @@ public class Pemilihan2Percobaan211 {
         Scanner sc = new Scanner(System.in);
         int menu;
         double diskon;
-        String member;
+        String member, qris;
         int jumlah_beli;
-        double total_bayar, harga;
+        double total_bayar, bayar, harga, diskonQris;
         System.out.println("----------------");
         System.out.println("====MENU JTI====");
         System.out.println("----------------");
@@ -21,7 +21,7 @@ public class Pemilihan2Percobaan211 {
         System.out.println("Apakah mempunyai member? y/n");
         member = sc.nextLine();
         System.out.println("------------------");
-        if(member.equalsIgnoreCase("y")){
+        if(member.equals("y")){
             diskon = 0.10;
             System.out.println("Besar diskon adalah 10%");
             if(menu == 1){
@@ -43,10 +43,20 @@ public class Pemilihan2Percobaan211 {
                 System.out.println("Masukan pilihan menu dengan benar");
                 return;
             }
-
+            //metode bayar
+            sc.nextLine();
+            System.out.println("Apakah pembayaran menggunakan qris?");
+            qris = sc.nextLine();
+            if(qris.equalsIgnoreCase("y")){
+                diskonQris = 1000.0;
+            }
+            else{
+                diskonQris = 0;
+            }
             //menghitung total bayar
-            total_bayar = (harga - (harga * diskon))* jumlah_beli;
-            System.out.println("Total bayar setelah diskon : " +total_bayar);
+            bayar = (harga - (harga * diskon))* jumlah_beli;
+            total_bayar = bayar - diskonQris;
+            System.out.println("Total bayar setelah diskon : " + total_bayar);
         }
         else if(member.equalsIgnoreCase("n")){
             if(menu == 1){
@@ -68,8 +78,18 @@ public class Pemilihan2Percobaan211 {
                 System.out.println("Masukan pilihan menu dengan benar");
                 return;
             }
+            //qris
+            sc.nextLine();
+            System.out.println("Apakah pembayaran menggunakan qris?");
+            qris = sc.nextLine();
+            if(qris.equalsIgnoreCase("y")){
+                diskonQris = 1000.0;
+            }
+            else{
+                diskonQris = 0;
+            }
             // menghitung ttl byr
-            System.out.println("Total bayar = " +harga * jumlah_beli);
+            System.out.println("Total bayar = " + ((harga * jumlah_beli) - diskonQris));
         }
         else{
             System.out.println("Member tidak valid");
