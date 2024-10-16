@@ -7,7 +7,7 @@ public class SiakadWhile11 {
         jml = sc.nextInt();
         while(i < jml){
             while(i < jml){
-                System.out.println("Masukan nilai mahasiswa ke-" +(i + 1) +" 3:");
+                System.out.println("Masukan nilai mahasiswa ke-" +(i + 1) +" :");
                 nilai = sc.nextInt();
                 if(nilai < 0 || nilai>100){
                     System.out.println("Nilai tidak valid. Masukan lagi nilai yang valid!");
@@ -15,6 +15,7 @@ public class SiakadWhile11 {
                 }
                 if(nilai > 80 && nilai <= 100){
                     System.out.println("nilai mahasiswa ke-" + (i+1) + " adalah A");
+                    System.out.println("Bagus, pertahankan nilainya!");
                 } else if (nilai > 73 && nilai <= 80){
                     System.out.println("nilai mahasiswa ke-" + (i+1) + " adalah B");
                 } else if (nilai > 65 && nilai <= 73){
