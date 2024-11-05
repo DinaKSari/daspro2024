@@ -5,7 +5,7 @@ public class Star11 {
         int N;
         System.out.println("Masukan nilai N");
         N = sc.nextInt();
-        for (int i = 0; i <= N; i++) {
+        for (int i = 1; i <= N; i++) {
             System.out.print("*");
         }
     }
